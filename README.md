@@ -1,4 +1,4 @@
-# Todo Management App (Fullstack)
+<img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 04" src="https://github.com/user-attachments/assets/75e15bc7-b20d-4f7f-822f-b07b70f9c7a8" /># Todo Management App (Fullstack)
 
 Aplikasi **Todo Management** berbasis **React + Vite + Tailwind CSS v3 + Ant Design** di frontend, dan **NestJS + Prisma + PostgreSQL** di backend.  
 Project ini siap dijalankan **lokal** maupun **dengan Docker**.
@@ -76,3 +76,20 @@ docker-compose up --build
 ---
 
 ## 🔹 Screen Shots FE :
+1. Home page :
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 06 57" src="https://github.com/user-attachments/assets/7474aea9-b65c-429a-b4a1-de2b0c05fa2a" />
+
+2. Create Todos :
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 07 23" src="https://github.com/user-attachments/assets/3b920d1b-4856-4661-9cff-9d860b042d7c" />
+   (Success)
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 07 39" src="https://github.com/user-attachments/assets/26939948-9518-4234-aac4-7d4be338de2a" />
+
+3. Update Todos :
+  <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 00" src="https://github.com/user-attachments/assets/c4473898-8a7d-42da-a119-f1617646da39" />
+  (Success)
+  <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 04" src="https://github.com/user-attachments/assets/8954d11f-3d82-4079-b8f8-45d9d5f06948" />
+  
+5. Delete Todos :
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 11" src="https://github.com/user-attachments/assets/cdaa27e1-09c4-4338-ad41-c57054fb2177" />
+   (Success)
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 14" src="https://github.com/user-attachments/assets/3f609233-769c-40d7-8649-d150cfbf8ce0" />
