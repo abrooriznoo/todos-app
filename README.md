@@ -94,3 +94,7 @@ docker-compose up --build
    (Success)
    <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 43 59" src="https://github.com/user-attachments/assets/248d68a6-870f-48e9-87af-1a483f84a91f" />
 
+6. Confirm :
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 19 55 37" src="https://github.com/user-attachments/assets/4de9f348-f40d-4b98-905d-2a1606f07411" />
+ 
+
