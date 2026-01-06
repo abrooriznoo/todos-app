@@ -12,12 +12,12 @@ export default function EditTodoModal({ open, todo, onCancel, onSubmit }) {
     <Modal
       open={open}
       title="Edit Todo"
-      okText="Simpan"
+      okText="Save"
       onCancel={onCancel}
       onOk={() => onSubmit(title)}
     >
       <Input
-        placeholder="Judul todo"
+        placeholder="Todo title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />

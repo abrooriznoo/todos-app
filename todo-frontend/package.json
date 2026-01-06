@@ -13,6 +13,7 @@
     "antd": "^6.1.4",
     "axios": "^1.13.2",
     "react": "^19.2.0",
+    "react-confetti": "^6.4.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {

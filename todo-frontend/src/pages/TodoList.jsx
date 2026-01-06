@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Table, Checkbox, Input, Button, Spin, Alert, Popconfirm } from "antd";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { EditOutlined, DeleteOutlined, FilterOutlined, PlusOutlined } from "@ant-design/icons";
 import { useTodos } from "../hooks/useTodos";
+import Confetti from "react-confetti";
 import EditTodoModal from "../components/EditTodoModal";
 
 export default function TodoList() {
@@ -15,10 +16,12 @@ export default function TodoList() {
     toggle,
     update,
     remove,
+    confetti,
   } = useTodos();
 
   const [title, setTitle] = useState("");
   const [editingTodo, setEditingTodo] = useState(null);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const columns = [
     {
@@ -75,6 +78,15 @@ export default function TodoList() {
 
   return (
     <div className="min-h-screen bg-slate-100 px-6 py-10">
+      {confetti && (
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          recycle={false} // tampil sekali
+          numberOfPieces={200} // opsional, lebih ramai
+        />
+      )}
+
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
@@ -103,34 +115,58 @@ export default function TodoList() {
             <Button
               size="large"
               type="primary"
-              className="sm:w-28"
               onClick={async () => {
                 const ok = await addTodo(title);
                 if (ok) setTitle("");
               }}
             >
-              Add
+              <PlusOutlined />
             </Button>
           </div>
         </div>
 
         {/* Search */}
-        <div className="space-y-4 grid grid-col-2 sm:space-y-0 sm:flex sm:justify-end sm:items-center mb-4 gap-4">
-          <div className="max-w-sm grid-cols-1">
-            <Input
-              placeholder="Cari todo..."
-              allowClear
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-          <div className="grid-cols-1">
+        <div className="flex flex-col mb-4">
+          {/* Tombol Toggle Filter - Hanya muncul di Mobile */}
+          <div className="sm:hidden flex justify-end mb-2">
             <Button
-              onClick={() => setSearch("")}
-              className="rounded-lg border border-slate-300 text-slate-600 hover:text-slate-800 hover:border-slate-400"
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              className="rounded-lg flex items-center gap-2"
             >
-              Reset
+              <FilterOutlined />
             </Button>
+          </div>
+
+          {/* Container Search & Reset */}
+          <div
+            className={`
+              ${isFilterOpen ? "flex" : "hidden"} 
+              sm:flex flex-row items-center justify-end gap-2 w-full
+            `}
+          >
+            {/* Input Search */}
+            <div className="flex-1 sm:max-w-sm">
+              <Input
+                placeholder="Cari todo..."
+                allowClear
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="rounded-lg w-full"
+              />
+            </div>
+
+            {/* Tombol Reset */}
+            <div className="flex-shrink-0">
+              <Button
+                onClick={() => {
+                  setSearch("");
+                  setIsFilterOpen(false); // Opsional: tutup setelah reset
+                }}
+                className="rounded-lg border border-slate-300 text-slate-600"
+              >
+                Reset
+              </Button>
+            </div>
           </div>
         </div>
 
