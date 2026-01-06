@@ -1,4 +1,6 @@
-<img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 04" src="https://github.com/user-attachments/assets/75e15bc7-b20d-4f7f-822f-b07b70f9c7a8" /># Todo Management App (Fullstack)
+<img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 06 57" src="https://github.com/user-attachments/assets/7474aea9-b65c-429a-b4a1-de2b0c05fa2a" />
+
+# Todo Management App (Fullstack)
 
 Aplikasi **Todo Management** berbasis **React + Vite + Tailwind CSS v3 + Ant Design** di frontend, dan **NestJS + Prisma + PostgreSQL** di backend.  
 Project ini siap dijalankan **lokal** maupun **dengan Docker**.
@@ -27,28 +29,26 @@ Project ini siap dijalankan **lokal** maupun **dengan Docker**.
 ### A. Tanpa Docker
 
 **Backend:**
-cd todo-backend
-npm install
-npm run start:dev
-
-# Server berjalan di http://localhost:3000
+- cd todo-backend
+- npm install
+- npm run start:dev
+  
+Server berjalan di http://localhost:3000
 
 **Frontend:**
-cd todo-frontend
-npm install
-npm run dev
-
-# Frontend berjalan di http://localhost:5173
+- cd todo-frontend
+- npm install
+- npm run dev
+  
+Frontend berjalan di http://localhost:5173
 
 ### B. Dengan Docker
 
 docker-compose up --build
 
-# Backend: http://localhost:3000/api
-
-# Frontend: http://localhost:5173
-
-# Database: PostgreSQL port 5432
+- Backend: http://localhost:3000/api
+- Frontend: http://localhost:5173
+- Database: PostgreSQL port 5432
 
 ---
 
@@ -61,7 +61,7 @@ docker-compose up --build
 - **Toggle Completed**: Klik checkbox → menandai selesai/belum
 - **Error / Loading**: Notifikasi toast muncul untuk feedback aksi
 
-# **Semua request FE dikirim dengan header x-user-id → backend menolak jika kosong (401 Unauthorized)**
+**Semua request FE dikirim dengan header x-user-id → backend menolak jika kosong (401 Unauthorized)**
 
 ---
 
@@ -85,11 +85,12 @@ docker-compose up --build
    <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 07 39" src="https://github.com/user-attachments/assets/26939948-9518-4234-aac4-7d4be338de2a" />
 
 3. Update Todos :
-  <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 00" src="https://github.com/user-attachments/assets/c4473898-8a7d-42da-a119-f1617646da39" />
-  (Success)
-  <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 04" src="https://github.com/user-attachments/assets/8954d11f-3d82-4079-b8f8-45d9d5f06948" />
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 00" src="https://github.com/user-attachments/assets/c4473898-8a7d-42da-a119-f1617646da39" />
+   (Success)
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 43 48" src="https://github.com/user-attachments/assets/22c98f69-5145-422c-90e7-738bc3b9aefa" />
   
 5. Delete Todos :
    <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 11" src="https://github.com/user-attachments/assets/cdaa27e1-09c4-4338-ad41-c57054fb2177" />
    (Success)
-   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 08 14" src="https://github.com/user-attachments/assets/3f609233-769c-40d7-8649-d150cfbf8ce0" />
+   <img width="1440" height="722" alt="Screenshot 2026-01-06 at 17 43 59" src="https://github.com/user-attachments/assets/248d68a6-870f-48e9-87af-1a483f84a91f" />
+
