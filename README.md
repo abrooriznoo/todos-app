@@ -31,6 +31,8 @@ Project ini siap dijalankan **lokal** maupun **dengan Docker**.
 **Backend:**
 - cd todo-backend
 - npm install
+- npx prisma generate
+- npx prisma migrate dev
 - npm run start:dev
   
 Server berjalan di http://localhost:3000
